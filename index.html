@@ -9,93 +9,224 @@
       content="Портфолио с галереей для лабораторной работы по HTML"
     />
     <title>Мое портфолио</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
   <body>
-    <header>
-      <h1>Мое портфолио</h1>
-      <pre>
-        ██████   ██████                  ██████   ███                     █████                                █████        ████            █████    
-        ░░██████ ██████                  ███░░███ ░░░                     ░░███                                ░░███        ░░███           ░░███     
-         ░███░█████░███  █████ ████     ░███ ░░░  ████  ████████   █████  ███████      █████ ███ █████  ██████  ░███████     ░███   ██████   ░███████ 
-         ░███░░███ ░███ ░░███ ░███     ███████   ░░███ ░░███░░███ ███░░  ░░░███░      ░░███ ░███░░███  ███░░███ ░███░░███    ░███  ░░░░░███  ░███░░███
-         ░███ ░░░  ░███  ░███ ░███    ░░░███░     ░███  ░███ ░░░ ░░█████   ░███        ░███ ░███ ░███ ░███████  ░███ ░███    ░███   ███████  ░███ ░███
-         ░███      ░███  ░███ ░███      ░███      ░███  ░███      ░░░░███  ░███ ███    ░░███████████  ░███░░░   ░███ ░███    ░███  ███░░███  ░███ ░███
-         █████     █████ ░░███████      █████     █████ █████     ██████   ░░█████      ░░████░████   ░░██████  ████████     █████░░████████ ████████ 
-        ░░░░░     ░░░░░   ░░░░░███     ░░░░░     ░░░░░ ░░░░░     ░░░░░░     ░░░░░        ░░░░ ░░░░     ░░░░░░  ░░░░░░░░     ░░░░░  ░░░░░░░░ ░░░░░░░░  
-                          ███ ░███                                                                                                                    
-                         ░░██████                                                                                                                     
-                          ░░░░░░                                                                                                                      
-      </pre>
+    <header class="header">
+      <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a href="/" class="navbar-brand header-title-link"
+            >Мой сайт-портфолио</a
+          >
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a href="#about" class="nav-link">Обо мне</a>
+              </li>
+              <li class="nav-item">
+                <a href="#skills" class="nav-link">Навыки</a>
+              </li>
+              <li class="nav-item">
+                <a href="#achievements" class="nav-link">Достижения</a>
+              </li>
+              <li class="nav-item">
+                <a href="#quotes" class="nav-link"
+                  >Цитаты от Джейсона Стетхема</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="#about">Обо мне</a></li>
-        <li><a href="#gallery">Галерея</a></li>
-        <li><a href="#achievements">Достижения</a></li>
-        <li><a href="#quotes">Цитаты от Джейсона Стетхема</a></li>
-        <li><a href="#molecule">Формула успеха</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
-
     <main>
-      <section id="about">
-        <h2>Обо мне</h2>
-        <p>
-          Привет! Меня зовут Матевосян Игорь. Это мой сайт-портфолио, созданный
-          для лабораторной по вебу.
-        </p>
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="section-title">Обо мне</h2>
+          <p class="about-subtitle">
+            Привет! Меня зовут Матевосян Игорь. Это мой сайт-портфолио,
+            созданный для лабораторной по вебу.
+          </p>
+        </div>
       </section>
 
-      <section id="gallery">
-        <h2>Галерея</h2>
-        <img src="image1.jpg" alt="Изображение 1" />
-        <img src="image2.jpg" alt="Изображение 2" />
-        <img src="image3.jpg" alt="Изображение 3" />
+      <section class="skills" id="skills">
+        <div class="container">
+          <h2 class="section-title">Навыки</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="places-card">
+                <img
+                  src="images/python.svg"
+                  alt="Python"
+                  class="places-card-picture img-fluid"
+                />
+                <figcaption class="places-card-title">Python</figcaption>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="places-card">
+                <img
+                  src="images/linux.svg"
+                  alt="Linux"
+                  class="places-card-picture img-fluid"
+                />
+                <figcaption class="places-card-title">Linux</figcaption>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="places-card">
+                <img
+                  src="images/windows.svg"
+                  alt="Windows"
+                  class="places-card-picture img-fluid"
+                />
+                <figcaption class="places-card-title">Windows</figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="achievements">
-        <h2>Достижения</h2>
-        <ul>
-          <li>Здесь пока ничего нет</li>
-        </ul>
+      <section class="achievements" id="achievements">
+        <div class="container">
+          <h2 class="section-title">Достижения</h2>
+          <ul>
+            <li>Здесь пока ничего нет</li>
+          </ul>
+        </div>
       </section>
 
       <section id="quotes">
-        <h2>Цитаты от Джейсона Стетхема</h2>
-        <ul>
-          <li>Всего одна ошибка – и ты ошибся.</li>
-          <li>
-            В жизни всегда есть две дороги: одна — первая, а другая — вторая.
-          </li>
-          <li>Делай, как надо. Как не надо, не делай.</li>
-        </ul>
-      </section>
-
-      <section id="molecule">
-        <h2>Формула успеха</h2>
-        <p>
-          C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, также известная
-          как кофеин.
-        </p>
-      </section>
-
-      <section id="contact">
-        <h2>Контакты</h2>
-        <address>
-          <p>
-            Email:
-            <a href="mailto:helloworld@example.com">helloworld@example.com</a>
-          </p>
-          <p>Телефон: +100500</p>
-        </address>
+        <div class="container">
+          <h2 class="section-title">Цитаты от Джейсона Стетхема</h2>
+          <ul class="quotes-list">
+            <li class="quotes-list-item">Всего одна ошибка – и ты ошибся.</li>
+            <li class="quotes-list-item">
+              В жизни всегда есть две дороги: одна — первая, а другая — вторая.
+            </li>
+            <li class="quotes-list-item">
+              Делай, как надо. Как не надо, не делай.
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2023 Мое портфолио</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-item">
+          <h2 class="footer-title">
+            <a href="/" class="footer-title-link"> Мой сайт-портфолио </a>
+          </h2>
+          <nav class="footer-nav">
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <h3 class="footer-menu-title">Контакты</h3>
+              </li>
+              <li class="footer-menu-item">
+                <a href="mailto:helloworld@example.com" class="footer-menu-link"
+                  >helloworld@example.com</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <a
+                  href="https://github.com/igaaryok/web-5sem"
+                  class="footer-menu-link"
+                  >Github</a
+                >
+              </li>
+              <li class="footer-menu-item">
+                <p>Телефон: +100500</p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </footer>
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Команда</th>
+            <th scope="col">Победы</th>
+            <th scope="col">Ничьи</th>
+            <th scope="col">Поражения</th>
+            <th scope="col">Очки</th>
+            <th scope="col">Мячи</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Зенит</td>
+            <td>10</td>
+            <td>3</td>
+            <td>2</td>
+            <td>33</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Локомотив</td>
+            <td>9</td>
+            <td>4</td>
+            <td>2</td>
+            <td>31</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>ЦСКА</td>
+            <td>9</td>
+            <td>2</td>
+            <td>4</td>
+            <td>29</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Спартак</td>
+            <td>8</td>
+            <td>3</td>
+            <td>4</td>
+            <td>27</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

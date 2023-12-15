@@ -17,6 +17,10 @@ body {
   color: black;
 }
 
+.active {
+  background-color: black !important;
+}
+
 /* main styles */
 
 .section-title {
@@ -171,3 +175,34 @@ body {
 .footer-menu-link:active {
   opacity: 75%;
 }
+
+.footer-timer {
+  color: white;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer-menu-text {
+  color: white;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* todolist styles */
+
+.todolist {
+  padding-top: 100px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+

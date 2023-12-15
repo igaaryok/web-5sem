@@ -1,3 +1,6 @@
+const preloader = document.querySelector(".preloader");
+preloader.style.display = "block";
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("todoForm");
   const taskInput = document.getElementById("taskInput");
@@ -49,7 +52,7 @@ function addTask(text) {
     saveTasks();
   });
 
-  taskItem.appendChild(taskText)
+  taskItem.appendChild(taskText);
   taskItem.appendChild(toggleButton);
   taskItem.appendChild(deleteButton);
   taskList.appendChild(taskItem);
@@ -103,10 +106,43 @@ function loadTasks() {
         saveTasks();
       });
 
-      taskItem.appendChild(taskText)
+      taskItem.appendChild(taskText);
       taskItem.appendChild(toggleButton);
       taskItem.appendChild(deleteButton);
       taskList.appendChild(taskItem);
     });
   }
 }
+
+function sleep(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const content = document.getElementById("todoList");
+
+  setTimeout(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.json())
+      .then((tasks) => {
+        const randomNumber = Math.floor(Math.random() * 100);
+        tasks.slice(randomNumber, randomNumber + 2).forEach((task) => {
+          renderTask(task.title);
+        });
+        preloader.style.display = "none";
+      })
+      .catch((error) => {
+        preloader.style.display = "none";
+        console.error("Error fetching tasks:", error);
+        const errorElement = document.createElement("div");
+        errorElement.classList.add("error");
+        errorElement.textContent = "⚠ Something went wrong";
+        content.appendChild(errorElement);
+      });
+  }, 2000);
+
+  function renderTask(task) {
+    addTask(task);
+    saveTasks();
+  }
+});

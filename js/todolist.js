@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const taskText = taskInput.value;
+    const formData = new FormData(event.target);
+    const taskText = formData.get("taskInput");
     if (taskText.trim() !== "") {
       addTask(taskText);
       taskInput.value = "";

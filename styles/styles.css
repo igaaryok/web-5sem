@@ -17,6 +17,10 @@ body {
   color: black;
 }
 
+.active {
+  background-color: black !important;
+}
+
 /* main styles */
 
 .section-title {
@@ -170,4 +174,60 @@ body {
 .footer-menu-link:focus,
 .footer-menu-link:active {
   opacity: 75%;
+}
+
+.footer-timer {
+  color: white;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer-menu-text {
+  color: white;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* todolist styles */
+
+.todolist {
+  padding-top: 100px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* preloader styles */
+
+.preloader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.content {
+  text-align: left;
+  display: none;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
 }

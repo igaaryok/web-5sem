@@ -23,6 +23,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/swiper.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -52,7 +58,7 @@
                 >
               </li>
               <li class="nav-item todolist-item">
-                <a href="/todolist.html" class="nav-link">Список моих дел</a>
+                <a href="todolist.html" class="nav-link">Список моих дел</a>
               </li>
             </ul>
           </div>
@@ -74,37 +80,63 @@
       <section class="skills" id="skills">
         <div class="container">
           <h2 class="section-title">Навыки</h2>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="places-card">
-                <img
-                  src="images/python.svg"
-                  alt="Python"
-                  class="places-card-picture img-fluid"
-                />
-                <figcaption class="places-card-title">Python</figcaption>
+          <!-- Swiper Container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="places-card">
+                  <img
+                    src="images/python.svg"
+                    alt="Python"
+                    class="places-card-picture img-fluid"
+                  />
+                  <figcaption class="places-card-title">Python</figcaption>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="places-card">
+                  <img
+                    src="images/linux.svg"
+                    alt="Linux"
+                    class="places-card-picture img-fluid"
+                  />
+                  <figcaption class="places-card-title">Linux</figcaption>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="places-card">
+                  <img
+                    src="images/windows.svg"
+                    alt="Windows"
+                    class="places-card-picture img-fluid"
+                  />
+                  <figcaption class="places-card-title">Windows</figcaption>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="places-card">
+                  <img
+                    src="images/git.svg"
+                    alt="Git"
+                    class="places-card-picture img-fluid"
+                  />
+                  <figcaption class="places-card-title">Git</figcaption>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="places-card">
+                  <img
+                    src="images/js.svg"
+                    alt="JS"
+                    class="places-card-picture img-fluid"
+                  />
+                  <figcaption class="places-card-title">JS</figcaption>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="places-card">
-                <img
-                  src="images/linux.svg"
-                  alt="Linux"
-                  class="places-card-picture img-fluid"
-                />
-                <figcaption class="places-card-title">Linux</figcaption>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="places-card">
-                <img
-                  src="images/windows.svg"
-                  alt="Windows"
-                  class="places-card-picture img-fluid"
-                />
-                <figcaption class="places-card-title">Windows</figcaption>
-              </div>
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -220,5 +252,16 @@
     </div>
     <script src="js/scroll.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // Initialize Swiper
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
